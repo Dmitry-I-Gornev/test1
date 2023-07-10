@@ -1,11 +1,12 @@
-package test.config;
+package test.beans.config;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.stereotype.Component;
 
-//@Configuration
+
+@Component
 @Data
 @PropertySource("classpath:application.properties")
 public class ConfigApp {
@@ -14,11 +15,4 @@ public class ConfigApp {
     @Value("${second.name}")
     String secondName;
 
-  /*  public String getFirstName() {
-        return firstName;
-    }
-
-    public String getSecondName() {
-        return secondName;
-    }*/
 }
